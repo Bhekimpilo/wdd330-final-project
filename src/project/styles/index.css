@@ -1,6 +1,10 @@
 :root {
     --min-width: 450px;
     --max-width: 1200px;
+    --primary-colour: #2c3e50;
+    --secondary-colour: #27ae60;
+    --tertiary-colour: #f1c40f;
+    --accent-colour: #e74c3c;
 }
 
 body {
@@ -14,18 +18,22 @@ body {
     font-weight: bold;
     color: white;
     font-size: 2rem;
+    font-weight: bold;
     display: flex;
     justify-content: end;
     padding: 8px 18px;
+    font-family: "Indie Flower", cursive;
 }
 
 .menu.open::before {
     content: 'x';
     color: white;
     font-size: 2rem;
+    font-weight: bold;
     display: flex;
     justify-content: end;
     padding: 8px 18px;
+    font-family: "Indie Flower", cursive;
 }
 
 .menu-list {
@@ -44,14 +52,15 @@ body {
 .menu-list li {
     padding: 5px;
     cursor: pointer;
+    font-family: 'Roboto', sans-serif;
 }
 
 .menu-list li:hover {
-    color: aqua;
+    color: var(--tertiary-colour);
 }
 
 nav {
-    background-color: black;
+    background-color: var(--primary-colour);
 }
 
 .banner {
@@ -59,15 +68,32 @@ nav {
     justify-content: center;  
     align-items: center;  
     overflow: hidden;
-    min-width: 600px;
+    min-width: 450px;
 }
 
 nav ul li {
     list-style: none;
 }
 
+main {
+    display: flex;
+}
 
+.side {
+    width: 300px;
+    height: 600px;
+    background-color: antiquewhite;
 
+}
+
+.grid {
+    display: grid;
+    border: 2px solid black;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    width: 100%;
+    height: 600px;
+    gap: 1rem;
+}
 
 
 
@@ -77,12 +103,13 @@ footer {
     position: fixed;
     bottom: 0;
     text-align: center;
-    padding: 1rem 2rem;
-    background-color: black;
+    padding: 1rem 0;
+    background-color: var(--primary-colour);
     color: white;
     font-size: 1rem;
     max-width: var(--max-width);
     width: 100%;
+    font-family: 'Roboto', sans-serif;
 }
 
 
