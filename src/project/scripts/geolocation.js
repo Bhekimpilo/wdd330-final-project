@@ -1,8 +1,7 @@
-import axios from 'axios';
+import axios from "axios";
 
-const API_KEY = 'ae47dafdb0c0924661af519771812100';
-const BASE_URL = 'http://api.positionstack.com/v1/forward';
-
+const API_KEY = "ae47dafdb0c0924661af519771812100";
+const BASE_URL = "http://api.positionstack.com/v1/forward";
 
 /**
  * Fetch coordinates for an address
@@ -22,7 +21,6 @@ export async function getCoordinates(address) {
     const data = response.data?.data[0];
     return data;
   } catch (error) {
-    console.error('Error fetching coordinates:', error);
     return null;
   }
 }

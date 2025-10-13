@@ -1,46 +1,69 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/index.css">    
-    <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/index.css" />
+    <link
+      rel="shortcut icon"
+      href="images/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
     <script src="scripts/index.js" defer></script>
     <script type="module" src="scripts/map.js" defer></script>
     <title>GeoTrivia</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-       
-        <nav>
-            <div class="menu"></div>
-            <ul class="menu-list">
-                <li><a href="index"></a>Home</li>
-                <li><a href="item 1"></a>Item 1</li>
-                <li><a href="item 2"></a>Item 2</li>
-                <li><a href="item 3"></a>Item 3</li>
-            </ul>
-            <div class="banner">
-                <img src="images/banner.png" alt="banner-image" width="100%" height="350">
-            </div>
-        </nav>
+      <nav>
+        <div class="menu"></div>
+        <ul class="menu-list">
+          <li><a href="index"></a>Home</li>
+          <li><a href="item 1"></a>Item 1</li>
+          <li><a href="item 2"></a>Item 2</li>
+          <li><a href="item 3"></a>Item 3</li>
+        </ul>
+        <div class="banner">
+          <img
+            src="images/banner.png"
+            alt="banner-image"
+            width="100%"
+            height="350"
+          />
+        </div>
+      </nav>
     </header>
     <main>
-        <div class="side"></div>
-        <div class="grid">
-            <div id="map"></div>
-            <div class="question"></div>
-            <div class="response"></div>
-            <button type="button">Submit</button>
-        </div>
+      <div class="side"></div>
+      <div class="grid">
+        <div id="map"></div>
+        <div class="question"></div>
+        <div class="response"></div>
+        <button type="button">Submit</button>
+      </div>
     </main>
     <footer>
-        <p>&copy; <span class="year"></span> - WDD330 | GeoTrivia | Bhekimpilo Ncube</p>
+      <p>
+        &copy; <span class="year"></span> - WDD330 | GeoTrivia | Bhekimpilo
+        Ncube
+      </p>
     </footer>
-</body>
+  </body>
 </html>

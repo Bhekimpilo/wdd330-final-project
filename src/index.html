@@ -17,10 +17,22 @@
           <span>Sleep<span class="highlight">Outside</span></span>
         </a>
         <ul class="nav-links">
-          <li><a href="/product_listing/index.html?category=tents">Tents</a></li>
-          <li><a href="/product_listing/index.html?category=backpacks">Backpacks</a></li>
-          <li><a href="/product_listing/index.html?category=sleeping-bags">Sleeping Bags</a></li>
-          <li><a href="/product_listing/index.html?category=hammocks">Hammocks</a></li>
+          <li>
+            <a href="/product_listing/index.html?category=tents">Tents</a>
+          </li>
+          <li>
+            <a href="/product_listing/index.html?category=backpacks"
+              >Backpacks</a
+            >
+          </li>
+          <li>
+            <a href="/product_listing/index.html?category=sleeping-bags"
+              >Sleeping Bags</a
+            >
+          </li>
+          <li>
+            <a href="/product_listing/index.html?category=hammocks">Hammocks</a>
+          </li>
           <li><a href="/login/index.html" class="btn-login">Login</a></li>
         </ul>
       </nav>
@@ -84,13 +96,16 @@
       <!-- Newsletter Sign Up -->
       <section class="newsletter">
         <h2>Stay in the loop!</h2>
-        <p>Sign up for our newsletter to get the latest outdoor gear updates and exclusive deals.</p>
+        <p>
+          Sign up for our newsletter to get the latest outdoor gear updates and
+          exclusive deals.
+        </p>
         <form id="newsletterForm">
-          <input 
-            type="email" 
-            id="newsletterEmail" 
-            placeholder="Enter your email" 
-            required 
+          <input
+            type="email"
+            id="newsletterEmail"
+            placeholder="Enter your email"
+            required
           />
           <button type="submit">Subscribe</button>
         </form>
@@ -104,7 +119,10 @@
     <!-- Page-specific JS -->
     <script type="module">
       import Newsletter from "./js/newsletter.js";
-      const newsletter = new Newsletter("#newsletterForm", "#newsletterMessage");
+      const newsletter = new Newsletter(
+        "#newsletterForm",
+        "#newsletterMessage",
+      );
       newsletter.init();
     </script>
   </body>

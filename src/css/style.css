@@ -204,7 +204,6 @@ button {
   width: 100%;
 }
 
-
 .cart-card__name-link {
   grid-row: 1;
   grid-column: 2;
@@ -316,7 +315,7 @@ button {
   width: 90%;
   padding: 2rem;
   position: relative;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
   animation: scaleUp 0.2s ease-in-out;
   max-height: 90vh;
   overflow-y: auto;
@@ -369,7 +368,8 @@ button {
 }
 
 /* NEW: Styling for discount bagdge */
-p.discount-badge, .discount-badge {
+p.discount-badge,
+.discount-badge {
   display: inline-block;
   background: var(--primary-color);
   color: #fff;
@@ -379,13 +379,13 @@ p.discount-badge, .discount-badge {
   border-radius: 1em;
   margin-top: 1rem;
   margin-bottom: 0.5em;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
   letter-spacing: 0.5px;
 }
 
 .checkout-btn {
   width: 100%;
-  
+
   padding: 1rem;
   font-size: 1.2rem;
   background-color: var(--secondary-color);
@@ -410,10 +410,11 @@ p.discount-badge, .discount-badge {
   }
 }
 
-.checkout-form h2, .order-summary h2 {
-    border-bottom: 1px solid var(--dark-grey);
-    padding-bottom: 0.5rem;
-    margin-bottom: 1rem;
+.checkout-form h2,
+.order-summary h2 {
+  border-bottom: 1px solid var(--dark-grey);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .checkout-form form {
@@ -451,7 +452,6 @@ p.discount-badge, .discount-badge {
 .checkout-form input:invalid {
   border-color: #d33;
 }
-
 
 .checkout-button {
   width: 100%;
@@ -494,35 +494,35 @@ p.discount-badge, .discount-badge {
 
 /* Success Page */
 .success-message {
-    text-align: center;
-    padding: 4rem 1rem;
+  text-align: center;
+  padding: 4rem 1rem;
 }
 
 .success-message h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    color: var(--secondary-color);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--secondary-color);
 }
 
 .success-message p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
 }
 
 .success-message a {
-    display: inline-block;
-    padding: 1rem 2rem;
-    background-color: var(--primary-color);
-    color: var(--dark-grey);
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s;
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: var(--primary-color);
+  color: var(--dark-grey);
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s;
 }
 
 .success-message a:hover {
-    background-color: var(--tertiary-color);
-    color: white;
+  background-color: var(--tertiary-color);
+  color: white;
 }
 
 /* --- Carousel Styles --- */
@@ -590,12 +590,20 @@ p.discount-badge, .discount-badge {
 
 /* Animations */
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 @keyframes scaleUp {
-  from { transform: scale(0.9); }
-  to { transform: scale(1); }
+  from {
+    transform: scale(0.9);
+  }
+  to {
+    transform: scale(1);
+  }
 }
 
 @media screen and (min-width: 500px) {
