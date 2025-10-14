@@ -3,127 +3,67 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sleep Outside | Home</title>
-    <link rel="stylesheet" href="/css/style.css" />
-    <script src="js/main.js" type="module"></script>
+    <link rel="stylesheet" href="styles/index.css" />
+    <link
+      rel="shortcut icon"
+      href="images/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <script src="js/index.js" defer></script>
+    <script type="module" src="js/map.js" defer></script>
+    <title>GeoTrivia</title>
   </head>
-
   <body>
-    <!-- Header -->
-    <header class="divider" id="main-header">
-      <nav class="main-nav">
-        <a href="/index.html" class="logo logo--inline">
-          <img src="/images/noun_Tent_2517.svg" alt="tent logo" />
-          <span>Sleep<span class="highlight">Outside</span></span>
-        </a>
-        <ul class="nav-links">
-          <li>
-            <a href="/product_listing/index.html?category=tents">Tents</a>
-          </li>
-          <li>
-            <a href="/product_listing/index.html?category=backpacks"
-              >Backpacks</a
-            >
-          </li>
-          <li>
-            <a href="/product_listing/index.html?category=sleeping-bags"
-              >Sleeping Bags</a
-            >
-          </li>
-          <li>
-            <a href="/product_listing/index.html?category=hammocks">Hammocks</a>
-          </li>
-          <li><a href="/login/index.html" class="btn-login">Login</a></li>
+    <header>
+      <nav>
+        <div class="menu"></div>
+        <ul class="menu-list">
+          <li><a href="index"></a>Home</li>
+          <li><a href="item 1"></a>Item 1</li>
+          <li><a href="item 2"></a>Item 2</li>
+          <li><a href="item 3"></a>Item 3</li>
         </ul>
+        <div class="banner">
+          <img
+            src="images/banner.png"
+            alt="banner-image"
+            width="100%"
+            height="350"
+          />
+        </div>
       </nav>
     </header>
-
-    <!-- Main -->
-    <main class="divider">
-      <!-- Hero Section -->
-      <div class="hero">
-        <picture>
-          <source srcset="/images/banner.jpg" media="(min-width: 600px)" />
-          <img
-            src="/images/banner-sm.jpg"
-            alt="image of a high mountain lake"
-          />
-        </picture>
-        <div class="hero-content">
-          <div class="logo logo--square">
-            <img src="/images/noun_Tent_2517.svg" alt="tent image for logo" />
-            <div>Sleep<span class="highlight">Outside</span></div>
-          </div>
-          <div class="mission">
-            <p>
-              Our mission is to provide you with everything you need to sleep
-              outside comfortably at an affordable price.
-            </p>
-          </div>
-        </div>
+    <main>
+      <div class="side"></div>
+      <div class="grid">
+        <div id="map"></div>
+        <div class="question"></div>
+        <div class="response"></div>
+        <button type="button">Submit</button>
       </div>
-
-      <!-- Category Products -->
-      <section class="products">
-        <ul class="product-grid">
-          <li>
-            <a href="product_listing/index.html?category=tents">
-              <img src="images/category-tents.svg" alt="Tents" />
-              <h2>Tents</h2>
-            </a>
-          </li>
-          <li>
-            <a href="product_listing/index.html?category=backpacks">
-              <img src="images/category-backpacks.svg" alt="Backpacks" />
-              <h2>Backpacks</h2>
-            </a>
-          </li>
-          <li>
-            <a href="product_listing/index.html?category=sleeping-bags">
-              <img src="images/category-sleepingbags.svg" alt="Sleeping Bags" />
-              <h2>Sleeping Bags</h2>
-            </a>
-          </li>
-          <li>
-            <a href="product_listing/index.html?category=hammocks">
-              <img src="images/category-hammocks.svg" alt="Hammocks" />
-              <h2>Hammocks</h2>
-            </a>
-          </li>
-        </ul>
-      </section>
-
-      <!-- Newsletter Sign Up -->
-      <section class="newsletter">
-        <h2>Stay in the loop!</h2>
-        <p>
-          Sign up for our newsletter to get the latest outdoor gear updates and
-          exclusive deals.
-        </p>
-        <form id="newsletterForm">
-          <input
-            type="email"
-            id="newsletterEmail"
-            placeholder="Enter your email"
-            required
-          />
-          <button type="submit">Subscribe</button>
-        </form>
-        <p id="newsletterMessage" class="message"></p>
-      </section>
     </main>
-
-    <!-- Footer -->
-    <footer id="main-footer"></footer>
-
-    <!-- Page-specific JS -->
-    <script type="module">
-      import Newsletter from "./js/newsletter.js";
-      const newsletter = new Newsletter(
-        "#newsletterForm",
-        "#newsletterMessage",
-      );
-      newsletter.init();
-    </script>
+    <footer>
+      <p>
+        &copy; <span class="year"></span> - WDD330 | GeoTrivia | Bhekimpilo
+        Ncube
+      </p>
+    </footer>
   </body>
 </html>
