@@ -14,9 +14,9 @@
 //     .bindPopup(area)
 //     .openPopup();
 
-import { getQuestions } from "./trivia";
+import { getQuestions } from "trivia";
 
-const questions = await getQuestions(5, "medium");
+const questions = getQuestions(5, "medium");
 const q_holder = document.querySelector(".question");
 const r_holder = document.querySelector(".response");
 let index = 0;
