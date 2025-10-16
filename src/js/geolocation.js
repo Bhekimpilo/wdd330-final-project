@@ -1,26 +1,18 @@
-import axios from "axios";
-
-const API_KEY = "ae47dafdb0c0924661af519771812100";
+const API_KEY = "a847532d1cd9e2b70dbecb541d4d1fb5";
 const BASE_URL = "http://api.positionstack.com/v1/forward";
 
-/**
- * Fetch coordinates for an address
- * @param {string} address
- * @returns {Promise<{latitude: number, longitude: number}>}
- */
-export async function getCoordinates(address) {
-  try {
-    const response = await axios.get(BASE_URL, {
-      params: {
-        access_key: API_KEY,
-        query: address,
-        limit: 1,
-      },
-    });
 
-    const data = response.data?.data[0];
-    return data;
-  } catch (error) {
-    return null;
-  }
+export async function getCoordinates(place) {
+  const url = `${BASE_URL}?access_key=${API_KEY}&query=${encodeURIComponent(place)}`;
+  const res = await fetch(url);
+  const data = await res.json();
+
+  if (!data.data || data.data.length === 0) return null;
+
+  return {
+    name: data.data[0].name,
+    country: data.data[0].country,
+    latitude: data.data[0].latitude,
+    longitude: data.data[0].longitude
+  };
 }
