@@ -136,6 +136,15 @@ button {
   cursor: pointer;
 }
 
+button:disabled {
+  background-color: #b9b9b9;
+}
+
+button:disabled:hover {
+  background-color: #b9b9b9;
+  border-color: #b9b9b9;
+}
+
 button:hover {
   background-color: var(--accent-colour);
   border-color: var(--accent-colour);

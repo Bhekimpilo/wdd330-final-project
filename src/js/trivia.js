@@ -1,4 +1,4 @@
-import { getCoordinates } from "./geolocation";
+import { getCoordinates } from "./geolocation.js";
 
 const q_holder = document.querySelector(".question");
 const r_holder = document.querySelector(".response");
@@ -6,6 +6,7 @@ const baseUrl = "https://opentdb.com/api.php";
 const prev = document.querySelector("#prev-qstns");
 const stats = document.querySelector("#stats")
 const heading = document.querySelector("#stat-head")
+const btn = document.querySelector("button");
 const nlp = window.nlp;
 let score = localStorage.getItem("score");
 let previousQstns = localStorage.getItem('prev-qstns') || [];
@@ -38,6 +39,7 @@ function displayQuestion(qstn) {
   answers.sort();
   if (previousQstns.length > 0) 
     pastQstns = JSON.parse(localStorage.getItem("prev-qstns"))  || [];
+  btn.disabled = true;
   handleResponse(qstn, answers);
 }
 
@@ -53,7 +55,8 @@ function handleResponse(qstn, answers) {
     radio.value = answer;
     radio.addEventListener('change', () => {
       const radios = document.querySelectorAll('input[name="options"]');
-      radios.forEach((r) => r.disabled = true);      
+      radios.forEach((r) => r.disabled = true);
+      btn.disabled = false;      
       let aced = false;
       attempts++;
       if (qstn.correct_answer === radio.value) {
