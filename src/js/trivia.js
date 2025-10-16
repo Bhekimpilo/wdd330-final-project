@@ -1,5 +1,3 @@
-import axios from "axios";
-import nlp from "compromise";
 import { getCoordinates } from "./geolocation";
 
 const q_holder = document.querySelector(".question");
@@ -8,6 +6,7 @@ const baseUrl = "https://opentdb.com/api.php";
 const prev = document.querySelector("#prev-qstns");
 const stats = document.querySelector("#stats")
 const heading = document.querySelector("#stat-head")
+const nlp = window.nlp;
 let score = localStorage.getItem("score");
 let previousQstns = localStorage.getItem('prev-qstns') || [];
 let pastQstns = [];
@@ -114,6 +113,7 @@ async function detectPlace(text, alt) {
     return place;
   }
 
+  //In case all else fails, show them my home town :-)
   return {
     "country":"South Africa",
     "latitude":-25.7531683,
