@@ -1,5 +1,5 @@
-import { displayMap } from "./map";
-import { getQuestion } from "./trivia"
+import { displayMap } from "./map.js";
+import { getQuestion } from "./trivia.js"
 
 const hamburger = document.querySelector(".menu");
 const nav = document.querySelector(".menu-list");
