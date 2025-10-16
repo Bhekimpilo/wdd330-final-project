@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="images/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <title>GeoTrivia</title>
+    <script type="module" crossorigin src="/wdd330-final-project/assets/index-DQ7AUZwq.js"></script>
+    <link rel="stylesheet" crossorigin href="/wdd330-final-project/assets/index-BqYZ359Q.css">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="menu"></div>
+        <ul class="menu-list">
+          <li><a href="index">Home</a></li>
+          <li><a href="https://opentdb.com/" target="_blank">OpenTrivia Database</a></li>
+          <li><a href="https://positionstack.com" target="_blank">PositionStack</a></li>
+          <li><a href="https://github.com/Bhekimpilo/wdd330-final-project" target="_blank">My Github</a></li>
+        </ul>
+      </nav>
+      <div class="banner">
+        <img
+          src="/wdd330-final-project/assets/banner-LX08-Et3.png"
+          alt="banner-image"
+          width="100%"
+          height="350"
+        />
+      </div>
+    </header>
+    <main>
+      <div class="side">
+        <h2>Previous Questions</h2>
+        <div id="prev-qstns"></div>
+        <h2 id="stat-head">Statistics</h2>
+        <div id="stats"></div>
+      </div>
+      <div class="grid">
+        <div id="map"></div>
+        <div class="question"></div>
+        <div class="response">
+        </div>
+        <button type="button">Next Question</button>
+      </div>
+    </main>
+    <footer>
+      <p>
+        &copy; <span class="year"></span> - WDD330 | GeoTrivia | Bhekimpilo
+        Ncube
+      </p>
+    </footer>
+  </body>
+</html>
