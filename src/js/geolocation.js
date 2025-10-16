@@ -1,5 +1,5 @@
 const API_KEY = "a847532d1cd9e2b70dbecb541d4d1fb5";
-const BASE_URL = "http://api.positionstack.com/v1/forward";
+const BASE_URL = "https://api.positionstack.com/v1/forward";
 
 
 export async function getCoordinates(place) {
