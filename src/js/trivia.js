@@ -11,8 +11,8 @@ const nlp = window.nlp;
 let score = localStorage.getItem("score");
 let previousQstns = localStorage.getItem('prev-qstns') || [];
 let pastQstns = [];
-let attempts = parseInt(score.split("/")[1]);
-let success = parseInt(score.split("/")[0]);
+let attempts = parseInt(score?.split("/")[1]) || 0;
+let success = parseInt(score?.split("/")[0]) || 0;
 
 export async function getQuestion() {
   try {
